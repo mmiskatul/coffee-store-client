@@ -1,13 +1,21 @@
 import React from "react";
 import bgImage from "../../assets/11 3.png";
+import { Link } from "react-router-dom";
 
 const AddCoffee = () => {
   return (
     <div
-      className="w-full min-h-screen bg-cover bg-center flex items-center justify-center"
+      className="w-full min-h-screen bg-cover bg-center flex flex-col items-center justify-center"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <form className="w-3/4 max-w-2xl p-8 rounded-lg bg-[#F4F3F0] shadow-lg">
+      <div className="p-6 justify-start">
+        <Link to="/">
+          <button className="btn bg-[#331A15] hover:bg-[#4A2C23] text-white">
+            ← Back to Home
+          </button>
+        </Link>
+      </div>
+      <form className="w-[80%] max-w-3xl p-12 rounded-lg bg-[#F4F3F0] shadow-lg">
         <h1 className="text-4xl font-bold mb-4 text-center text-[#331A15]">
           Add New Coffee
         </h1>
