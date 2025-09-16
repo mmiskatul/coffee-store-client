@@ -5,7 +5,7 @@ import Products from '../Components/Products/Products'
 
 const Home = () => {
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center  bg-white'>
        <Hero/>
       <Feature/>
       <Products/>
