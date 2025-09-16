@@ -6,7 +6,7 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5001/products/${id}`)
+    fetch(`http://localhost:5001/product/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched product:", data);
@@ -42,7 +42,7 @@ const ProductDetails = () => {
             <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
               Name:
             </span>{" "}
-            {product.name}
+            
           </p>
           <p>
             <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
