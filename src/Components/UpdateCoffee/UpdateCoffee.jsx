@@ -1,9 +1,83 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-const UpdateCoffee = () => {
+const UpdateProduct = () => {
+  const { id } = useParams();
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    fetch(`http://localhost:5001/update/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Fetched product:", data);
+        setProduct(data);
+      })
+      .catch((err) => console.error("Error fetching product:", err));
+  }, [id]);
+
+  if (!product) {
+    return <p className="text-center mt-10">Loading product details...</p>;
+  }
+
   return (
-    <div>UpdateCoffee</div>
-  )
-}
+    <div className="flex mb-20 flex-col md:flex-row items-center justify-center bg-[#F5F4F1] p-8 rounded-lg shadow-lg max-w-4xl mx-auto mt-10">
+      
+      {/* Left - Image */}
+      <div className="w-full  flex justify-center  mb-6 md:mb-0">
+        <img
+          src={product.picUrl}
+          alt={product.name}
+          className="rounded-lg shadow-md   object-cover"
+        />
+      </div>
 
-export default UpdateCoffee
+      {/* Right - Details */}
+      <div className="w-full md:w-1/2 space-y-4 px-6">
+        <h2 className="text-3xl font-bold text-[#331A15] mb-4 border-b-2 border-[#E3B577] pb-2">
+          Product Details
+        </h2>
+
+        <div className="space-y-3">
+          <p>
+            <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
+              Name: {product.name}
+            </span>
+            
+          </p>
+          <p>
+            <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
+              Chef:   {product.chef}
+            </span>
+          
+          </p>
+          <p>
+            <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
+              Supplier: {product.supplier}
+            </span>
+            
+          </p>
+          <p>
+            <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
+              Taste: {product.teste}
+            </span>
+            
+          </p>
+          <p>
+            <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
+              Category: {product.category}
+            </span>
+            
+          </p>
+          <p>
+            <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
+              Details: {product.details}
+            </span>
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default UpdateProduct;
