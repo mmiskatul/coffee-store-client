@@ -5,12 +5,14 @@ import bgimage from '../../assets/Rectangle 18.png'
 function Footer() {
   return (
     <div>
-      <footer className="w-full footer sm:footer-horizontal bg-white text-black p-10 " style={{backgroundImage: `url(${bgimage})` }}>
+      <footer className="w-full flex justify-center footer sm:footer-horizontal bg-white text-black p-10  " style={{backgroundImage: `url(${bgimage})` }}>
         
-       <div className="w-1/2" >
-
+       <div className="" >
+        <div>
+            h
+        </div>
        </div>
-       <div>
+       <div className="">
          <form>
           <h6 className="footer-title">Newsletter</h6>
           <fieldset className="w-80">
