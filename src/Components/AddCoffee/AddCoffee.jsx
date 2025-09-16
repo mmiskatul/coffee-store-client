@@ -1,16 +1,25 @@
-import React from "react";
 import bgImage from "../../assets/11 3.png";
 import { Link } from "react-router-dom";
 
 const AddCoffee = () => {
-  const handleSubmit =e=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const form = e.target; 
-  const formData = new FormData(form); 
-  const data = Object.fromEntries(formData.entries()); 
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
-  console.log("Form Data:", data);
-  }
+    console.log("Form Data:", data);
+    fetch("http://localhost:5001/product", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
+
   return (
     <div
       className="w-full min-h-screen bg-cover bg-center flex flex-col items-center justify-center"
@@ -23,7 +32,10 @@ const AddCoffee = () => {
           </button>
         </Link>
       </div>
-      <form onSubmit={handleSubmit} className="w-[80%] max-w-3xl p-30 rounded-lg bg-[#F4F3F0] shadow-lg">
+      <form
+        onSubmit={handleSubmit}
+        className="w-[80%] max-w-3xl p-30 rounded-lg bg-[#F4F3F0] shadow-lg"
+      >
         <h1 className="text-4xl font-bold mb-4 text-center text-[#331A15]">
           Add New Coffee
         </h1>
@@ -91,7 +103,6 @@ const AddCoffee = () => {
           {/* Category */}
           <div className="form-control">
             <label className="label">
-              
               <span className="label-text text-[#331A15]">Category</span>
             </label>
             <input
@@ -130,8 +141,11 @@ const AddCoffee = () => {
 
         {/* Submit Button */}
         <div className="mt-8 text-center">
-          <input type="submit" value=" Add Coffee" className="btn bg-[#331A15] hover:bg-[#4A2C23] text-white w-full">
-          </input>
+          <input
+            type="submit"
+            value=" Add Coffee"
+            className="btn bg-[#331A15] hover:bg-[#4A2C23] text-white w-full"
+          ></input>
         </div>
       </form>
     </div>
