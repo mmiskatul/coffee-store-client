@@ -43,7 +43,7 @@ const AddCoffee = () => {
         <h1 className="text-4xl font-bold mb-4 text-center text-[#331A15]">
           Add New Coffee
         </h1>
-        <p className="text-sm mb-8 text-gray-600 text-center">
+        <p className="Raleway text-sm mb-8 text-gray-600 text-center">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsum is that it has a more-or-less normal distribution of
@@ -51,7 +51,7 @@ const AddCoffee = () => {
         </p>
 
         {/* Grid Inputs */}
-        <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+        <div className="Raleway grid grid-cols-2 gap-x-8 gap-y-6">
           {/* Coffee Name */}
           <div className="form-control">
             <label className="label">
