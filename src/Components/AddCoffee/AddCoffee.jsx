@@ -9,15 +9,19 @@ const AddCoffee = () => {
     const data = Object.fromEntries(formData.entries());
 
     console.log("Form Data:", data);
-    fetch("http://localhost:5001/product", {
+    fetch("http://localhost:5001/products", {
       method: "POST",
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
+        "Content-type": "application/json",
       },
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        if(data.acknowledged){
+          alert('Product added Succesffuly');
+        }
+      });
   };
 
   return (
