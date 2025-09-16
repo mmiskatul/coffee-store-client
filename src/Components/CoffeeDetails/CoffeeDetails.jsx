@@ -20,14 +20,14 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center bg-[#F5F4F1] p-8 rounded-lg shadow-lg max-w-4xl mx-auto mt-10">
+    <div className="flex mb-20 flex-col md:flex-row items-center justify-center bg-[#F5F4F1] p-8 rounded-lg shadow-lg max-w-4xl mx-auto mt-10">
       
       {/* Left - Image */}
-      <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
+      <div className="w-full  flex justify-center  mb-6 md:mb-0">
         <img
           src={product.picUrl}
           alt={product.name}
-          className="rounded-lg shadow-md w-64 h-64 object-cover"
+          className="rounded-lg shadow-md   object-cover"
         />
       </div>
 
