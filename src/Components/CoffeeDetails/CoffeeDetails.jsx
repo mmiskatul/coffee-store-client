@@ -40,39 +40,39 @@ const ProductDetails = () => {
         <div className="space-y-3">
           <p>
             <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
-              Name:
-            </span>{" "}
+              Name: {product.name}
+            </span>
             
           </p>
           <p>
             <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
-              Chef:
-            </span>{" "}
-            {product.chef}
+              Chef:   {product.chef}
+            </span>
+          
           </p>
           <p>
             <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
-              Supplier:
-            </span>{" "}
-            {product.supplier}
+              Supplier: {product.supplier}
+            </span>
+            
           </p>
           <p>
             <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
-              Taste:
-            </span>{" "}
-            {product.taste}
+              Taste: {product.teste}
+            </span>
+            
           </p>
           <p>
             <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
-              Category:
-            </span>{" "}
-            {product.category}
+              Category: {product.category}
+            </span>
+            
           </p>
           <p>
             <span className="bg-[#E3B577] px-2 py-1 rounded font-semibold text-[#331A15]">
-              Details:
-            </span>{" "}
-            {product.details}
+              Details: {product.details}
+            </span>
+            
           </p>
         </div>
       </div>
