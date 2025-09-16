@@ -31,7 +31,16 @@ const Home = () => {
         <h3 className="Raleway text-black font-bold"> Follow Us Now</h3>
         <h1 className="text-[#331A15] text-5xl">Follow on Instagram</h1>
 
-       
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {pictures.map((picture) => (
+            <img
+              key={picture.id}
+              src={picture.pic}
+              alt={`cup-${picture.id}`}
+              className="rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
