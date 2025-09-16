@@ -57,9 +57,9 @@ const Products = () => {
 
               {/* Right: Actions */}
               <div className="w-full md:w-1/5 flex flex-col  pt-6 items-center md:items-end space-y-8 mt-4 md:mt-0">
-                <img src={view} alt="View" className="w-8 h-8 cursor-pointer" />
-                <img src={Edit} alt="Edit" className="w-8 h-8 cursor-pointer" />
-                <img src={delicon} alt="Delete" className="w-8 h-8 cursor-pointer"/>
+                <Link to={`/coffee/${product._id}`}><img src={view} alt="Delete" className="w-8 h-8 cursor-pointer"/></Link>
+                <Link><img src={Edit} alt="Edit" className="w-8 h-8 cursor-pointer" /></Link>
+                <Link><img src={delicon} alt="Delete" className="w-8 h-8 cursor-pointer"/></Link>
               </div>
             </div>
           ))
