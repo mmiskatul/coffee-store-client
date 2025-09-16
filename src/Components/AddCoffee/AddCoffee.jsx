@@ -3,6 +3,9 @@ import bgImage from "../../assets/11 3.png";
 import { Link } from "react-router-dom";
 
 const AddCoffee = () => {
+  const handleSubmit =e=>{
+    e.preventDefault();
+  }
   return (
     <div
       className="w-full min-h-screen bg-cover bg-center flex flex-col items-center justify-center"
@@ -15,7 +18,7 @@ const AddCoffee = () => {
           </button>
         </Link>
       </div>
-      <form className="w-[80%] max-w-3xl p-30 rounded-lg bg-[#F4F3F0] shadow-lg">
+      <form onSubmit={handleSubmit} className="w-[80%] max-w-3xl p-30 rounded-lg bg-[#F4F3F0] shadow-lg">
         <h1 className="text-4xl font-bold mb-4 text-center text-[#331A15]">
           Add New Coffee
         </h1>
@@ -36,6 +39,7 @@ const AddCoffee = () => {
             <input
               type="text"
               placeholder="Enter Coffee Name"
+              name="name"
               className="input input-bordered w-full"
             />
           </div>
@@ -48,6 +52,7 @@ const AddCoffee = () => {
             <input
               type="text"
               placeholder="Enter Coffee Chef"
+              name="chef"
               className="input input-bordered w-full"
             />
           </div>
@@ -60,6 +65,7 @@ const AddCoffee = () => {
             <input
               type="text"
               placeholder="Enter Supplier Name"
+              name="supplier"
               className="input input-bordered w-full"
             />
           </div>
@@ -72,6 +78,7 @@ const AddCoffee = () => {
             <input
               type="text"
               placeholder="Enter Coffee Taste"
+              name="teste"
               className="input input-bordered w-full"
             />
           </div>
@@ -79,11 +86,13 @@ const AddCoffee = () => {
           {/* Category */}
           <div className="form-control">
             <label className="label">
+              
               <span className="label-text text-[#331A15]">Category</span>
             </label>
             <input
               type="text"
               placeholder="Enter Coffee Category"
+              name="category"
               className="input input-bordered w-full"
             />
           </div>
@@ -95,8 +104,21 @@ const AddCoffee = () => {
             </label>
             <input
               type="text"
+              name="details"
               placeholder="Enter Coffee Details"
               className="input input-bordered w-full"
+            />
+          </div>
+          {/* Photo url  */}
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text text-[#331A15]">Photo</span>
+            </label>
+            <input
+              type="text"
+              name="picUrl"
+              placeholder="Enter photo URL"
+              className="input input-bordered w-[212%]"
             />
           </div>
         </div>
