@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 const AddCoffee = () => {
   const handleSubmit =e=>{
     e.preventDefault();
+    const form = e.target; 
+  const formData = new FormData(form); 
+  const data = Object.fromEntries(formData.entries()); 
+
+  console.log("Form Data:", data);
   }
   return (
     <div
