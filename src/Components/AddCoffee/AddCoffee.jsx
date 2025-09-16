@@ -15,7 +15,7 @@ const AddCoffee = () => {
           </button>
         </Link>
       </div>
-      <form className="w-[80%] max-w-3xl p-12 rounded-lg bg-[#F4F3F0] shadow-lg">
+      <form className="w-[80%] max-w-3xl p-30 rounded-lg bg-[#F4F3F0] shadow-lg">
         <h1 className="text-4xl font-bold mb-4 text-center text-[#331A15]">
           Add New Coffee
         </h1>
@@ -103,9 +103,8 @@ const AddCoffee = () => {
 
         {/* Submit Button */}
         <div className="mt-8 text-center">
-          <button className="btn bg-[#331A15] hover:bg-[#4A2C23] text-white w-full">
-            Add Coffee
-          </button>
+          <input type="submit" value=" Add Coffee" className="btn bg-[#331A15] hover:bg-[#4A2C23] text-white w-full">
+          </input>
         </div>
       </form>
     </div>
