@@ -34,7 +34,7 @@ const Products = () => {
                 <img
                   src={product.picUrl}
                   alt={product.name}
-                  className="size-60 rounded-md"
+                  className="size-58 rounded-md"
                 />
               </div>
 
@@ -50,7 +50,7 @@ const Products = () => {
                 </div>
                 <div className="flex space-x-2">
                   <span className="font-semibold">Price:</span>
-                  <span className="text-gray-700">{product.teste}</span>
+                  <span className="text-gray-700">{product.price ? `${product.price} Taka `:""} </span>
                 </div>
                 
               </div>

@@ -116,6 +116,18 @@ const AddCoffee = () => {
               className="input input-bordered w-full"
             />
           </div>
+          {/* Category */}
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text text-[#331A15]">Price</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Enter Coffee Price"
+              name="price"
+              className="input input-bordered w-full"
+            />
+          </div>
 
           {/* Details */}
           <div className="form-control">
@@ -138,7 +150,7 @@ const AddCoffee = () => {
               type="text"
               name="picUrl"
               placeholder="Enter photo URL"
-              className="input input-bordered w-[212%]"
+              className="input input-bordered w-full"
             />
           </div>
         </div>
