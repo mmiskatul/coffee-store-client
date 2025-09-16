@@ -12,7 +12,16 @@ import pic7 from "../assets/cups/Rectangle 15.png";
 import pic8 from "../assets/cups/Rectangle 16.png";
 
 const Home = () => {
- 
+  const pictures = [
+    { id: 1, pic: pic1 },
+    { id: 2, pic: pic2 },
+    { id: 3, pic: pic3 },
+    { id: 4, pic: pic4 },
+    { id: 5, pic: pic5 },
+    { id: 6, pic: pic6 },
+    { id: 7, pic: pic7 },
+    { id: 8, pic: pic8 },
+  ];
   return (
     <div className="flex flex-col justify-center items-center  bg-white">
       <Hero />
