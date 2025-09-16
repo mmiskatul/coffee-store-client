@@ -2,7 +2,14 @@ import React from "react";
 import Feature from "../Components/Feature/Feature";
 import Hero from "../Components/Hero/Hero";
 import Products from "../Components/Products/Products";
-
+import pic1 from "../assets/cups/Rectangle 9.png";
+import pic2 from "../assets/cups/Rectangle 10.png";
+import pic3 from "../assets/cups/Rectangle 11.png";
+import pic4 from "../assets/cups/Rectangle 12.png";
+import pic5 from "../assets/cups/Rectangle 13.png";
+import pic6 from "../assets/cups/Rectangle 14.png";
+import pic7 from "../assets/cups/Rectangle 15.png";
+import pic8 from "../assets/cups/Rectangle 16.png";
 
 const Home = () => {
  
